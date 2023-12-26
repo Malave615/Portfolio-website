@@ -25,9 +25,10 @@ h1 {
   font-weight: 700;
 }
 
-h1.work {
+h2.work {
   color: white;
   text-align: center;
+  text-decoration: underline;
 }
 
 h2 {
