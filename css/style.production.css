@@ -11,12 +11,13 @@ a {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  background-image: url(https://t3.ftcdn.net/jpg/06/42/09/50/240_F_642095000_fKrDBOuh3rUq6LpCQ5WjeO7elx2EV8jV.jpg);
   font-weight: 400;
   font-size: 16px;
   /* Sets the font size to 16px */
   line-height: 1.6
   /* Sets the line-height to 1.6 */
+
 }
 
 h1 {
@@ -126,11 +127,13 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .page-footer {
   clear: both;
+  color: white;
 }
 
 .profile {
  max-width: 700px;
  margin: 0 auto;
+ color: white;
 }
 
 * {
