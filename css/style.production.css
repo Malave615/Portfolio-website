@@ -156,6 +156,7 @@ button:hover, button:focus, .button:hover, .button:focus {
   display: flex;
   width: 100%;
   padding: 20px;
+  background-color: #D4AF37;
 }
 
 .page-header_item {
