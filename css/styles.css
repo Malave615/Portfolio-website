@@ -231,7 +231,7 @@ button:hover, button:focus, .button:hover, .button:focus {
   min-height: auto;
   color: var(--white);
   text-align: center;
-  line-height: auto;
+  line-height: normal;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -244,7 +244,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .overlay {
-  position: absolulute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
