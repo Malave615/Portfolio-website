@@ -176,6 +176,11 @@ button:hover, button:focus, .button:hover, .button:focus {
   text-align: right;
 }
 
+.contact {
+  color: white;
+  text-align: center;
+}
+
 .navigation-list {
   list-style-type: none;
 }
