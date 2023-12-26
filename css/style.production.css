@@ -134,6 +134,7 @@ button:hover, button:focus, .button:hover, .button:focus {
  max-width: 700px;
  margin: 0 auto;
  color: white;
+ text-align: center;
 }
 
 * {
@@ -179,6 +180,11 @@ button:hover, button:focus, .button:hover, .button:focus {
 .contact {
   color: white;
   text-align: center;
+}
+
+.contact_form_box {
+  width: 200px;
+  margin: auto;
 }
 
 .navigation-list {
