@@ -11,6 +11,8 @@ a {
 }
 
 body {
+  background-image: url(https://t4.ftcdn.net/jpg/01/52/12/13/360_F_152121321_Si4c871faNdefjiAGm650k1qoxkK9eIR.jpg);
+  background-size: cover;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -22,6 +24,7 @@ body {
 h1 {
   font-size: 30px;
   font-weight: 700;
+  color: #FFFF00;
 }
 
 h2 {
@@ -42,8 +45,14 @@ li {
   font-weight: bold;
 }
 
+.work-header {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #FFFF00;
+}
+
 a {
-  color: #357b70;
+  color: #FFFF00;
 }
 
 a:visited {
@@ -61,7 +70,7 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-.button {
+.button, .contact-button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
@@ -101,7 +110,7 @@ button {
   transition: opacity 0.2s;
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover, .contact-button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
@@ -121,16 +130,23 @@ button:hover, button:focus, .button:hover, .button:focus {
   float:left;
   width: 250px;
   margin-right: 40px;
-  border-radius: 50%;
+  border-radius: 40%;
 }
 
 .page-footer {
   clear: both;
+  color: whitesmoke;
+}
+
+.contact_info {
+  color: whitesmoke;
+  text-align: center;
 }
 
 .profile {
  max-width: 700px;
  margin: 0 auto;
+ color: whitesmoke;
 }
 
 * {
@@ -156,12 +172,14 @@ button:hover, button:focus, .button:hover, .button:focus {
   display: flex;
   width: 100%;
   padding: 20px;
+  background-color: #99B7D1;
 }
 
 .page-header_item {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 200px;
           flex: 0 1 200px;
+          margin: 10px;
 }
 
 .page-header_item:last-child {
@@ -169,6 +187,14 @@ button:hover, button:focus, .button:hover, .button:focus {
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: right;
+}
+
+.contact-form {
+  margin: auto;
+  text-align: center;
+  color: whitesmoke;
+  box-align: center;
+  width: 350px;
 }
 
 .navigation-list {
@@ -236,7 +262,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .grid_item {
-  background-color: #D3D3D3;
+  background-color: #000000;
   width: auto;
   min-height: auto;
   margin: 0;
