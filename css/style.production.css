@@ -214,9 +214,6 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
     width: 2px;
     content: '';
     background: white;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
 }
 
 .navigation-list li a:after
@@ -227,9 +224,6 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
     width: 2px;
     content: '';
     background: white;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
 }
 
 .navigation-list li a:before
