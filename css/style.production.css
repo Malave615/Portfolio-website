@@ -232,13 +232,6 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
     bottom: 0px;
 }
 
-.navigation-list li a:hover:before, .navigation-list li a:hover:after
-{
-    opacity: 1;
-    height: 2px;
-    width: 100%;
-}
-
 @supports (display: grid) {
 .grid {
   display: -ms-grid;
