@@ -86,9 +86,6 @@ a:hover, a:focus {
   border-radius: 3px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
 }
 
 button {
@@ -106,9 +103,6 @@ button {
   border-radius: 3px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
 }
 
 button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover, .contact-button:focus {
