@@ -256,6 +256,11 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
   margin: 0;
 }
 
+.grid_item:hover {
+  border: 2px solid #FFFF00;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 .grid_item a {
   color: yellow;
   text-decoration: underline;
@@ -353,29 +358,6 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
           justify-content: center;
   color: white;
 } */
-
-.grid_item:hover {
-  -webkit-filter: brightness(70%);
-          filter: brightness(70%);
-}
-
-.grid_item::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.grid_item:hover::after {
-  opacity: 1;
-}
 
 @-webkit-keyframes color-change {
   0% {
