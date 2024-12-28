@@ -329,7 +329,7 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
 
 .grid_item img {
   max-width: 100%;
-  margin-top: auto;
+  margin-bottom: 10px;
   height: auto;
   display: block;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
