@@ -257,8 +257,8 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
 }
 
 .grid_item a {
-  color: #fff;
-  text-decoration: none;
+  color: yellow;
+  text-decoration: underline;
   position: relative;
   display: inline-block;
   padding-bottom: 5px;
