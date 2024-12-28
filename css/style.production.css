@@ -256,6 +256,28 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
   margin: 0;
 }
 
+.grid_item a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.grid_item a:hover {
+  color: #fff;
+  background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-position 0.5s ease-out;
+  padding-bottom: 5px;
+}
+
+.grid_item a:hover {
+  background-position: 100% 100%;
+}
+
 .grid__item:last-child {
   -ms-grid-column: 3;
   grid-column: 3 / 3;
@@ -309,7 +331,7 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-.overlay {
+/* .overlay {
   position: static;
   top: 0;
   left: 0;
@@ -330,7 +352,7 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
-}
+} */
 
 .grid_item:hover {
   -webkit-filter: brightness(70%);
