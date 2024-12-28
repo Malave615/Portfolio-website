@@ -338,7 +338,7 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
 }
 
 .grid_item::after {
-  content: "overlay";
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
