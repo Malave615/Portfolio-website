@@ -254,6 +254,9 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
   width: auto;
   min-height: auto;
   margin: 0;
+}
+
+.grid_item h2 {
   margin-top: 20px;
 }
 
