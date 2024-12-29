@@ -251,8 +251,12 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
 }
 
 .grid_item {
+  display: flex;
+  flex-direction: column;
   width: auto;
   min-height: auto;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0;
 }
 
