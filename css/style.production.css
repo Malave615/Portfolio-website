@@ -95,12 +95,12 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
   opacity: 0.8;
 }
 
-.button__secondary {
+.button_secondary {
   background-color: #e0b354;
   color: #000000;
 }
 
-.navigation-list__item--active {
+.navigation-list_item--active {
   text-decoration: none;
 }
 
@@ -260,11 +260,6 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
     display: block;
     transition: transform 0.3s ease-in-out;
   }
-
-  .grid__item:last-child {
-    grid-column: 3 / 3;
-    grid-row: 1 / 3;
-  }
 }
 
 @media all and (min-width: 750px) {
@@ -272,17 +267,17 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
   }
+
+  .grid_item:last-child {
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-  }
-
-  .grid__item:last-child {
-    grid-column: auto;
-    grid-row: auto;
   }
 
   h1 {
