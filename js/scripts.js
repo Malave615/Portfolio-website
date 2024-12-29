@@ -57,11 +57,9 @@ function validatePassword() {
   return true;
 }
 
-const emailInput = document.querySelector('#email');
-const passwordInput = document.querySelector('#password');
+const emailInput = document.querySelector('#contact-email');
 
 emailInput.addEventListener('input', validateEmail);
-passwordInput.addEventListener('input', validatePassword);
 
 const form = document.querySelector('#form');
 
