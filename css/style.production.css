@@ -210,8 +210,8 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
     display: flex;
     flex-direction: column;
     width: auto;
-    min-height: auto;
-    justify-content: flex-start;
+    min-height: 400px;
+    justify-content: space-between;
     align-items: center;
     margin: 0;
     background-size: cover;
@@ -227,7 +227,16 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
   .grid_item h2 {
     margin-top: 0;
     text-align: center;
-    padding: 0;
+    padding: 10px 0;
+  }
+
+  .grid_item p {
+    margin: 10px 0;
+    padding: 10px;
+    text-align: justify;
+    flex-grow: 1;
+    max-height: 100px;
+    overflow: hidden;
   }
 
   .grid_item:hover {
