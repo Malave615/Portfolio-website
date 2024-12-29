@@ -237,6 +237,12 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
     flex-grow: 1;
     max-height: 100px;
     overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .grid_item p.show-more {
+    max-height: none;
+    overflow: visible;
   }
 
   .grid_item img {

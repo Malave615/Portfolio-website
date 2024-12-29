@@ -2,7 +2,7 @@ function showErrorMessage(input, message) {
   'use-strict';
 
   const container = input.parentElement;
-  const error = container.querySelector('error-message');
+  const error = container.querySelector('.error-message');
 
   if (error) {
     container.removeChild(error);
@@ -28,11 +28,7 @@ function validateEmail() {
     showErrorMessage(emailInput, 'Email is a required field.');
     return false;
   }
-  if (value.indexOf('@') === -1) {
-    showErrorMessage(emailInput, 'You must enter a valid email address.');
-    return false;
-  }
-  if (value.indexOf('.') === -1) {
+  if (!hasAtSign || !hasDot) {
     showErrorMessage(emailInput, 'You must enter a valid email address.');
     return false;
   }
@@ -40,22 +36,57 @@ function validateEmail() {
   return true;
 }
 
-/* function validatePassword() {
-    let value = passwordInput.value;
-    return value && value.length >= 8;
+function validatePassword() {
+  'use-strict';
 
-    if (!value) {
-        showErrorMessage(passwordInput, 'Password is a required field.');
-        return false;
-    }
-    if (value.length < 8) {
-        showErrorMessage(passwordInput, 'Password needs to be at least 8!');
-        return false;
-    }
-    showErrorMessage(passwordInput, null);
-    return true;
-} */
+  const passwordInput = document.querySelector('#password');
+  const { value } = passwordInput;
+
+  if (!value) {
+    showErrorMessage(passwordInput, 'Password is a required field.');
+    return false;
+  }
+  if (value.length < 8) {
+    showErrorMessage(
+      passwordInput,
+      'Password needs to be at least 8 characters.',
+    );
+    return false;
+  }
+  showErrorMessage(passwordInput, null);
+  return true;
+}
 
 const emailInput = document.querySelector('#email');
+const passwordInput = document.querySelector('#password');
+
 emailInput.addEventListener('input', validateEmail);
-// passwordInput.addEventListener('input', validatePassword);
+passwordInput.addEventListener('input', validatePassword);
+
+const form = document.querySelector('#form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const isEmailValid = validateEmail();
+  const isPasswordValid = validatePassword();
+
+  if (isEmailValid && isPasswordValid) {
+    form.submit();
+    alert('Form submitted!');
+  }
+});
+
+// Add event listener to grid items for text expansion
+document.addEventListener('DOMContentLoaded', () => {
+  const gridItems = document.querySelectorAll('.grid_item');
+
+  gridItems.forEach((gridItem) => {
+    const text = gridItem.querySelector('p');
+
+    // Add click event to toggle text expansion
+    gridItem.addEventListener('click', () => {
+      text.classList.toggle('show-more');
+    });
+  });
+});
