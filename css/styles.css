@@ -111,10 +111,6 @@ button:hover, button:focus, .button:hover, .button:focus {
   border-radius: 50%;
 }
 
-.page-footer {
-  clear: both;
-}
-
 .profile {
  max-width: 700px;
  margin: 0 auto;
@@ -134,11 +130,11 @@ button:hover, button:focus, .button:hover, .button:focus {
 .page-header {
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .page-header_item {
-  flex: 0 1 200px;
+  flex: 0 1 150px;
 }
 
 .page-header_item:last-child {
