@@ -198,6 +198,24 @@ button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover,
     bottom: 0px;
 }
 
+.skills-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.skills-list li {
+  margin-bottom: 8px;
+}
+
+.profile h2 {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 @supports (display: grid) {
   .grid {
     display: grid;
