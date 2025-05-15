@@ -8,115 +8,116 @@
         <link rel="shortcut icon" href="img/badge.svg">
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" type="text/css" href="css/style.production.css">
+		<link rel="stylesheet" type="text/css" href="css.work.css">
     </head>
 	
     <body id="top">
         <!--Header including the logo and the main navigation -->
-		<header class="page-header">
-			<img src="img/colorlogo.png" class="page-header_item" alt="Personal logo of Tracy Malavé, an image of a phoenix">
-			<h1>Tracy Malavé</h1>
-			<nav class="main-navigation page-header_item">
+		<header class="header">
+			<img src="img/colorlogo.png" class="header_logo" alt="Personal logo of Tracy Malavé, an image of a phoenix">
+			<h1 class="header_title">Tracy Malavé</h1>
+			<nav class="main-navigation header_nav">
 				<ul role="menubar" class="navigation-list">
-					<li role="presentation"><a href="index.html" role="menuitem" class="navigation-list_item navigation-list_item--active">Home</a></li>
+					<li role="presentation"><a href="index.html" role="menuitem" class="navigation-list_item">Home</a></li>
 					<li role="presentation"><a href="about.html" role="menuitem" class="navigation-list_item">About</a></li>
-					<li role="presentation"><a href="work.html" role="menuitem" class="navigation-list_item">Work</a></li>
+					<li role="presentation"><a href="work.html" role="menuitem" class="navigation-list_item navigation-list_item--active">Work</a></li>
 					<li role="presentation"><a href="contact.html" role="menuitem" class="navigation-list_item">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<!--Main Content -->	
-		<section>
-			<div class="work-header">
-				<h2>My Work</h2>
-				<p>
+		<main class="work-profile">
+			<section>
+				<h2 class="work-profile_heading">My Work</h2>
+				<p class="work-profile_text">
 					This portfolio showcases a variety of web development projects that highlight my skills in full-stack development.<br>
 					Each project demonstrates the diverse technologies and tools I have worked with<br>
 					- including HTML, CSS, JavaScript, React, Node.js, Angular, and more -<br>
 					to create responsive, user-friendly, and accessible web applications. Many of these projects feature responsive designs, full-stack architecture,<br>
-					API integrations, and progressive web apps, reflecting both technical breadth and real-worls problem solving.
+					API integrations, and progressive web apps, reflecting both technical breadth and real-world problem solving.
 				</p>
-			</div>
-			<div class="grid">
+			</section>
 
+			<div class="work-grid">
 					<!-- Grid items will live here -->
-				<div class="grid_item">
-					<h2>Responsive Portfolio Website</h2>
-					<p class="short-text">
+				<section class="work-grid_item">
+					<h2 class="work-grid_item-title">Responsive Portfolio Website</h2>
+					<p class="work-grid_item-text">
 					    A personal portfolio website that showcases my web development skills in a responsive, user-friendly design. The frontend is developed using React, and the layout was designed using HTML, CSS, and responsive design principles.
 					</p>
-					<a href="https://malave615.github.io/Portfolio-website/" target="_blank">See this project live!</a>
-					<a href="https://github.com/Malave615/Portfolio-website" target="_blank">See project on Github</a>
-					<img src="img/Portfolio_Website.png" alt="Portfolio Website" class="project-screenshot">
-				</div>
+					<a href="https://malave615.github.io/Portfolio-website/" target="_blank" class="work-grid_item-link" rel="noopener noreferrer">See this project live!</a>
+					<a href="https://github.com/Malave615/Portfolio-website" target="_blank" class="work-grid_item-link" rel="noopener noreferrer">See project on Github</a>
+					<img src="img/Portfolio_Website.png" alt="Screenshot of the Responsive Portfolio Website project" class="project-screenshot">
+				</section>
 
-				<div class="grid_item">
-					<h2>Meet App</h2>
-					<p class="short-text">
+				<section class="work-grid_item">
+					<h2 class="work-grid_item-title">Meet App</h2>
+					<p class="work-grid_item-text">
 						A Progressive Web App that allows users to discover, filter through, and track upcoming events in the city of their choice. It integrates with the google Calendar API and supports offline use, ensuring accessibility and usability anywhere. 
 						I was responsible both the frontend and the backend, using Node.js, React, 
 						Jest, Cucumber, Puppeteer, and Service workers to ensure seamless offline functionality and testing.
 					</p>
-					<a href="https://malave615.github.io/meet/" target="_blank">See this project live!</a>
-					<a href="https://github.com/Malave615/meet" target="_blank">See project on Github</a>
-					<img src="img/Meet_App.png" alt="Meet App" class="project-screenshot">
-				</div>
+					<a href="https://malave615.github.io/meet/" target="_blank" class="work-grid_item-link" rel="noopener noreferrer">See this project live!</a>
+					<a href="https://github.com/Malave615/meet" target="_blank" class="work-grid_item-link" rel="noopener noreferrer">See project on Github</a>
+					<img src="img/Meet_App.png" alt="Screenshot of the Meet App project" class="project-screenshot">
+				</section>
 
-				<div class="grid_item">
-					<h2>Pokedex App</h2>
-					<p class="short-text">
+				<section class="work-grid_item">
+					<h2 class="work-grid_item-title">Pokedex App</h2>
+					<p class="work-grid_item-text">
 					    A small web application that interacts with a public Pokémon API. Designed to teach API interaction by displaying detailed Pokémon data from an external API. 
 						The app allows users to search by name or ID and displays the Pokémon's name, ID, type, and an image. Built using jQuery, Bootstrap, and modern JavaScript features, with polyfills for wide browser compatibility.
 					</p>
-					<a href="https://malave615.github.io/Pokedex-app/" target="_blank">See this project live!</a>
-					<a href="https://github.com/Malave615/Pokedex-app">See project on Github</a>
-					<img src="img/Pokedex_App.png" alt="Pokedex App" class="project-screenshot">
-				</div>
+					<a href="https://malave615.github.io/Pokedex-app/" target="_blank" class="work-grid_item-link" rel="noopener noreferrer">See this project live!</a>
+					<a href="https://github.com/Malave615/Pokedex-app" class="work-grid_item-link" rel="noopener noreferrer">See project on Github</a>
+					<img src="img/Pokedex_App.png" alt="Screenshot of the Pokedex App project" class="project-screenshot">
+				</section>
 
-				<div class="grid_item">
-					<h2>Full-Stack Movie App</h2>
-					<p class="short-text">
+				<section class="work-grid_item">
+					<h2 class="work-grid_item-title">Full-Stack Movie App</h2>
+					<p class="work-grid_item-text">
 						This app enables movie enthusiasts to explore a curated catalog of films, create a user profile, and manage their favorites.
 						Users can also view info on the director, genre, and actors of each movie. The backend is built with Node.js and Express, and the frontend with React and Bootstrap. It demonstrates secure user authentication and RESTful API consumption.
 					</p>
-					<div class="project-links">
-						<p><strong>Frontend Repository:</strong><br>
-							<a href="https://malavemovies.netlify.app/" target="_blank">See project live!</a><br>
-						    <a href="https://github.com/Malave615/myFlix-client" target="_blank">See project on Github</a>
+					<div class="work-grid_item-links">
+						<p class="link-title"><strong>Frontend Repository:</strong><br>
+							<a href="https://malavemovies.netlify.app/" target="_blank" class="work-grid_item-link" rel="noopener noreferrer">See project live!</a><br>
+						    <a href="https://github.com/Malave615/myFlix-client" target="_blank" class="work-grid_item-link" rel="noopener noreferrer">See project on Github</a>
 						</p>
-						<p><strong>Backend Repository:</strong><br>
-							<a href="https://malave615.github.io/movie_api/" target="_blank">See project live!</a><br>
-						    <a href="https://github.com/Malave615/movie_api" target="_blank">See project on Github</a>
+						<p class="link-title"><strong>Backend Repository:</strong><br>
+							<a href="https://malave615.github.io/movie_api/" target="_blank" class="work-grid_item-link" rel="noopener noreferrer">See project live!</a><br>
+						    <a href="https://github.com/Malave615/movie_api" target="_blank" class="work-grid_item-link" rel="noopener noreferrer">See project on Github</a>
 						</p>
 					</div>
-					<img src="img/React_myFlix-client.png" alt="Full-Stack Movie App" class="project-screenshot">
-				</div>
+					<img src="img/React_myFlix-client.png" alt="Screenshot of the Full-Stack Movie App React project" class="project-screenshot">
+				</section>
 
-				<div class="grid_item">
-					<h2>Recipe-Sharing Website</h2>
-					<p class="short-text">
+				<section class="work-grid_item">
+					<h2 class="work-grid_item-title">Recipe-Sharing Website</h2>
+					<p class="work-grid_item-text">
 					    A frontend-focused project built to allow users to share and explore recipes from around the world. The purpose is to foster a community around cooking and food culture.
 						Developed using React.js, offering a clean UI for browsing and sharing recipes. The design emphasizes user-friendly layout and responsive behavior across devices.
 					</p>
-					<a href="#">See project on Github</a>
-					<img src="img/Food-Sharing_Website.png" alt="Food-Sharing Website" class="project-screenshot">
-				</div>
-				<div class="grid_item">
-					<h2>E-Commerce Webpage</h2>
-					<p class="short-text">
+					<a href="#" class="work-grid_item-link" rel="noopener noreferrer">See project on Github</a>
+					<img src="img/Food-Sharing_Website.png" alt="Screenshot of a Food-Sharing Website" class="project-screenshot">
+				</section>
+
+				<section class="work-grid_item">
+					<h2 class="work-grid_item-title">E-Commerce Webpage</h2>
+					<p class="work-grid_item-text">
 					    A React-based prototype of an e-commerce site that demonstrates key features of online shopping platforms, such as product listings, modern UI design, and responsive layout for a seamless shopping experience.
 						This project highlights frontend development skills and e-commerce UI patterns, built using React.js and styled with custom CSS templates.
 					</p>
-					<a href="#">See project on Github</a>
-				</div>
-
+					<a href="#" class="work-grid_item-link" rel="noopener noreferrer">See project on Github</a>
+				</section>
 			</div>
-		</section>	
+		</main>	
 
 		<!-- Footer with links to social media profiles -->
-		<footer class="page-footer">
-  			<p>FIND ME ON</p>
-  			<div class="social-media">
+		<footer class="footer">
+  			<p class="footer_text">FIND ME ON</p>
+  			<div class="footer_social-media">
 	  			<!-- Github logo -->
 	  			<a href="https://github.com/Malave615" target="_blank">
 	  				<img src="img/github_icon.svg" alt="github_icon">
@@ -135,7 +136,7 @@
 	  			</a>
 	  		</div>
 	  		<div>
-				<a href="#top">Back to top</a>
+				<a href="#top" class="footer_back-to-top">Back to top</a>
 			</div>
 		</footer>
 		<script src="js/scripts.js"></script>

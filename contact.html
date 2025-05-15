@@ -8,71 +8,84 @@
         <link rel="shortcut icon" href="img/badge.svg">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> 
         <link rel="stylesheet" type="text/css" href="css/style.production.css">
+		<link rel="stylesheet" type="text/css" href="css/contact.css">
     </head>
 	
     <body id="top">
-		<header class="page-header">
-			<img src="img/colorlogo.png" class="page-header_item" alt="Personal logo of Tracy Malavé, an image of a phoenix">
-			<h1>Tracy Malavé</h1>
-			<nav class="navigation-list page-header_item">
+		<header class="header">
+			<img src="img/colorlogo.png" class="header_logo" alt="Personal logo of Tracy Malavé, an image of a phoenix">
+			<h1 class="header_title">Tracy Malavé</h1>
+			<nav class="main-navigation header_nav">
 				<ul role="menubar" class="navigation-list">
-					<li role="presentation"><a href="index.html" role="menuitem" class="navigation-list_item navigation-list_item--active">Home</a></li>
+					<li role="presentation"><a href="index.html" role="menuitem" class="navigation-list_item">Home</a></li>
 					<li role="presentation"><a href="about.html" role="menuitem" class="navigation-list_item">About</a></li>
 					<li role="presentation"><a href="work.html" role="menuitem" class="navigation-list_item">Work</a></li>
-					<li role="presentation"><a href="contact.html" role="menuitem" class="navigation-list_item">Contact</a></li>
+					<li role="presentation"><a href="contact.html" role="menuitem" class="navigation-list_item navigation-list_item--active">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
-			
-		<div class="contact_info">
-			<h2>Contact</h2>
-
+		
+		<main class="contact-profile">
 			<div>
-    			Tracy Malavé<br>
-    			3071 Bosco Court<br>
-    			Virginia Beach, VA 23453<br>
-    			<br>
-    			<a href="Telephone">(757) 372-6660</a><br>
-    			<a href="mailto:malavetracy@gmail.com">malavetracy@gmail.com</a><br>
+				<h2 class="contact-profile_heading">Contact</h2>
+
+				<form id="basic-contact-form">
+					<label for="email">Email:</label><br>
+					<input type="email" id="email" name="email" required><br>
+					<span id="email-error" class="error-message"></span><br>
+					<button type="submit">Submit</button>
+				</form>
+	
+				<div>
+					Tracy Malavé<br>
+					3071 Bosco Court<br>
+					Virginia Beach, VA 23453<br>
+					<br>
+					<a href="tel:(757) 372-6660">(757) 372-6660</a><br>
+					<a href="mailto:malavetracy@gmail.com" aria-label="Let's Connect!">malavetracy@gmail.com</a><br>
+				</div>
 			</div>
-		</div>
-		<div class="contact-form">
-			<form action="update" method="post" id="contact-form"> 
-				<fieldset class="contact-form_box">
-					<legend>Contact Me</legend>
-					<label class="standard-label" for="contact-email">Email: </label>
-					<br>
-					<input type="email" id="contact-email" name="email" required>
-					<br>
-					<label class="standard-label data_label" for="contact-telephone">Telephone: </label>
-					<br>
-					<input type="tel" id="contact-telephone" name="telephone" pattern="\d{3}[\-]\d{3}[\-]/d{4}">
-					<br>
-					<label class="standard-label data_label" for="contact-message">Message: </label>
-					<br>
-					<textarea id="contact-message" name="message" required maxlength="240"></textarea>
-					<br>
-					<input class="contact-button" type="submit" value="Send message">
-				</fieldset>
-			</form>
-		</div>
-		<footer class="page-footer">
+	
+			<div class="contact-form-container">
+				<form action="update" method="post" id="detailed-contact-form"> 
+					<fieldset class="contact-form-box">
+						<legend>Contact Me</legend>
+						<label class="standard-label" for="contact-email">Email: </label>
+						<br>
+						<input type="email" id="contact-email" name="email" required aria-describedby="email-help">
+						<small id="email-help">Please enter a valid email address.</small>
+						<br>
+						<label class="standard-label data_label" for="contact-telephone">Telephone: </label>
+						<br>
+						<input type="tel" id="contact-telephone" name="telephone" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="(757) 372-6660">
+						<br>
+						<label class="standard-label data_label" for="contact-message">Message: </label>
+						<br>
+						<textarea id="contact-message" name="message" required maxlength="240"></textarea>
+						<br>
+						<input class="contact-button" type="submit" value="Send message">
+					</fieldset>
+				</form>
+			</div>
+		</main>
+
+		<footer class="footer">
   			<p>FIND ME ON</p>
-  			<div class="social-media">
+  			<div class="footer_social-media">
 	  			<!-- Github logo -->
-	  			<a href="https://github.com/Malave615" target="_blank">
+	  			<a href="https://github.com/Malave615" target="_blank" aria-label="Github profile">
 	  				<img src="img/github_icon.svg" alt="github_icon">
 	  			</a>
 	  			<!-- Instagram logo -->
-	  			<a href="https://www.instagram.com/ladyellafitz/" target="_blank">
+	  			<a href="https://www.instagram.com/ladyellafitz/" target="_blank" aria-label="Instagram profile">
 	  				<img src="img/instagram_icon.svg" alt="instagram_icon">
 	  			</a>
 				<!-- LinkedIn logo -->
-				<a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" target="_blank">
+				<a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" target="_blank" aria-label="LinkedIn profile">
 	  				<img src="img/linkedin_icon.svg" alt="linkedin">
 	  			</a>
 	  			<!-- Facebook logo -->
-	  			<a href="https://www.facebook.com/tracy.swenson" target="_blank">
+	  			<a href="https://www.facebook.com/tracy.swenson" target="_blank" aria-label="Facebook profile">
 	  				<img src="img/facebook_icon.svg" alt="facebook_icon">
 	  			</a>
 	  		</div>
