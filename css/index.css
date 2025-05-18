@@ -33,6 +33,7 @@
 .home-profile_bio {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
+  width: 500px;
   color: var(--whitesmoke);
   text-align: left;
   margin: 0 auto 2rem;
