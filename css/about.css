@@ -1,0 +1,119 @@
+/* ====== ABOUT PAGE STYLES ===== */
+.about-profile {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--whitesmoke);
+}
+
+.about-profile_portrait {
+  float:left;
+  width: 220px;
+  margin: 0 2rem 1.5rem 0;
+  border: 2px solid var(--yellow);
+  border-radius: 50%;
+}
+
+.about-profile_text {
+  overflow: hidden;
+}
+
+.about-profile_heading {
+  font-size: 1.5rem;
+  margin: 1.25rem 0 0.75rem;
+  color: var(--yellow);
+}
+
+.about-profile_bio {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  text-align: left;
+  margin: 0 auto 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--yellow);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.about-profile_skills-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.about-profile_cv-button button {
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+
+.about-footer_social-media a {
+  margin: 0 10px;
+}
+
+/* ====== ABOUT PICTURE STYLES ===== */
+/* ======ANIMATIONS ===== */
+#about-picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+#about-picture svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====== ANIMATIONS ===== */
+@keyframes color-change {
+  0% { fill: var(--lightyellow); }
+  50% { fill: var(--yellow); }
+  100% { fill: var(--orange); }
+}
+
+#about-picture .sun {
+  animation: 4s color-change infinite alternate linear !important;
+}
+
+@keyframes cloud-move {
+  from { transform: translate(0, 50px); }
+  to { transform: translate(200px, 50px); }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from { transform: translate(446px, 48px); }
+  to { transform: translate(100px, 48px); }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* ====== RESPONSIVE STYLES ===== */
+@media (max-width: 600px) {
+  .about-profile_portrait {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+
+  .about-profile {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .about-profile_bio {
+    text-align: center;
+  }
+
+  .about-profile_skills-list {
+    text-align: left;
+    padding-left: 1.25rem;
+  }
+}
