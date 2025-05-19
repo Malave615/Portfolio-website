@@ -9,7 +9,7 @@
 .about-profile_portrait {
   float: left;
   width: 220px;
-  margin: 6.5rem 2rem 1.5rem -5rem;
+  margin: 5.5rem 2rem 1.5rem -4rem;
   border: 2px solid var(--yellow);
   border-radius: 50%;
 }
@@ -37,21 +37,36 @@
 }
 
 .about-profile_skills-list {
-  line-height: 1.6;
-  font-size: 1.1rem;
+  list-style-type: disc;
   margin-bottom: 1.25rem;
-  text-align: left;
   background-color: rgba(0, 0, 0, 0.7);
   border: 2px solid var(--yellow);
   border-radius: 10px;
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 1.25rem;
+  padding: 1rem 1 rem 1 rem 2 rem;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  text-align: left;
 }
 
-.about-profile_cv-button button {
-  display: inline-block;
-  margin-top: 0.75rem;
+.about-profile_cv-button {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--whitesmoke);
+  border: 2px solid var(--yellow);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-profile_cv-button:hover,
+.about-profile_cv-button:focus {
+  background-color: var(--black) !important;
+  outline: 3px solid var(--yellow) !important;
+  box-shadow: 0 0 10px var(--yellow), 0 0 20px var(--yellow) !important;
+  opacity: 1 !important;
 }
 
 .about-footer_social-media a {
@@ -69,11 +84,13 @@
 }
 
 #about-picture svg {
+  transform: scale(1.2);
+  transform-origin: center;
   max-width: 100%;
   height: auto;
+  pointer-events: none;
 }
 
-/* ====== ANIMATIONS ===== */
 @keyframes color-change {
   0% { fill: var(--lightyellow); }
   50% { fill: var(--yellow); }
@@ -81,12 +98,12 @@
 }
 
 #about-picture .sun {
-  animation: 4s color-change infinite alternate linear !important;
+  animation: 6s color-change infinite alternate linear !important;
 }
 
 @keyframes cloud-move {
-  from { transform: translate(0, 50px); }
-  to { transform: translate(200px, 50px); }
+  from { transform: translate(0, 50px) scale(1); }
+  to { transform: translate(200px, 50px) scale(1.05); }
 }
 
 .cloud-front {
@@ -94,8 +111,8 @@
 }
 
 @keyframes cloud-move-reverse {
-  from { transform: translate(446px, 48px); }
-  to { transform: translate(100px, 48px); }
+  from { transform: translate(446px, 48px) scale(1); }
+  to { transform: translate(100px, 48px) scale(1.05); }
 }
 
 .cloud-back {

@@ -1,0 +1,262 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+:root {
+  --darkteal:#357b70;
+  --darkmagenta:#8b008b;
+  --white: white;
+  --mustard: #e0b354;
+  --cyan:#489c79;
+  --black: #000000;
+  --lightgray: #D3D3D3;
+  --yellow: #FFFF00;
+  --lightyellow: #fcffad;
+  --orange:#f76414;
+  --whitesmoke: #f5f5f5;
+  --dustyblue: #99B7D1;
+}
+
+/* ====== GLOBAL STYLES ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  background-image: url(https://images.unsplash.com/photo-1624487214384-580499c9fdd6?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3, a {
+  color: var(--yellow);
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+span {
+  font-style: italic;
+}
+
+li {
+  font-weight: bold;
+}
+
+/* ======LINKS ===== */
+a:visited {
+  color: var(--darkmagenta);
+}
+
+a:active {
+  color: var(--cyan);
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 4px;
+}
+
+/* ======HEADER & FOOTER STYLES ===== */
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: var(--dustyblue);
+  color: var(--yellow);
+  margin: 0.5rem 0.5rem;
+  border-radius: 8px;
+}
+
+.header_logo {
+  width: 125px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.header_title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--yellow);
+  margin: 0;
+}
+
+.header_item {
+  flex: 0 1 auto;
+}
+
+.header_nav {
+  margin-left: auto;
+  padding: 0 20px;
+  display: flex;
+}
+
+.header_item:last-child {
+  margin-left: auto;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--yellow);
+  padding: 20px 0;
+  flex-shrink: 0;
+}
+
+.footer_social-media {
+  font-size: 0;
+}
+
+.footer_social-media a {
+  margin:  0 2px;
+}
+
+.footer_back-to-top {
+  display: block;
+  margin-top: 10px;
+  color: var(--yellow);
+  font-size: 16px;
+}
+
+/* ======NAVIGATION ===== */
+.navigation-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.navigation-list li {
+  margin-left: 20px;
+  position: relative;
+}
+
+.navigation-list li a {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 4px;
+  font-size: 18px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.navigation-list li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--yellow);
+  transition: width 0.3s;
+}
+
+.navigation-list li a:hover,
+.navigation-list li a:focus {
+  font-size: 20px;
+}
+
+.navigation-list li a:hover::after {
+  width: 100%;
+}
+
+/* ======BUTTON STYLES ===== */
+.button, .contact-button, button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.button_secondary {
+  background-color: var(--mustard);
+  color: var(--black);
+}
+
+button:hover, button:focus, .button:hover, .button:focus, .contact-button:hover, .contact-button:focus {
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+/* ====== RESPONSIVE STYLES ====== */
+@media all and (max-width: 500px) {
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header_title {
+    font-size: 2rem;
+  }
+
+  .header_nav {
+    margin-top: 15px;
+  }
+
+  .navigation-list li a {
+    font-size: 1.2rem;
+  }
+
+  .footer_social-media a {
+    margin: 0 8px;
+  }
+}

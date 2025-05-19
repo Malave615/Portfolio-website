@@ -33,7 +33,7 @@
 .home-profile_bio {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  width: 500px;
+  width: 30rem;
   color: var(--whitesmoke);
   text-align: left;
   margin: 0 auto 2rem;
@@ -46,6 +46,10 @@
 .home-profile_projects-link {
   align-self: flex-start;
   font-size: 1rem;
+}
+
+.home-profile_projects-link:hover {
+  box-shadow: 0 0 10px var(--yellow), 0 0 20px var(--yellow);
 }
 
 /* ====== MEDIA QUERIES ===== */
