@@ -19,26 +19,6 @@ function validateEmail(emailInput) {
   return true;
 }
 
-function validatePassword() {
-  'use-strict';
-
-  const passwordInput = document.querySelector('#password');
-  const { value } = passwordInput;
-
-  if (!value) {
-    showErrorMessage(passwordInput, 'Password is a required field.');
-    return false;
-  }
-
-  if (value.length < 8) {
-    showErrorMessage(passwordInput, 'Password needs to be at least 8 characters.');    );
-    return false;
-  }
-
-  showErrorMessage(passwordInput, null);
-  return true;
-}
-
 function showErrorMessage(input, message) {
   const spanError = document.querySelector(`#${input.id}-error`);
 
@@ -63,40 +43,41 @@ function showErrorMessage(input, message) {
 
 // Run validation live on input
 document.addEventListener('DOMContentLoaded', () => {
-  // For basic contact form
-  const emailInputBasic = document.querySelector('#email');
-  const basicForm = document.querySelector('#basic-contact-form');
-
-  emailInputBasic.addEventListener('input', () =>
-    validateEmail(emailInputBasic),
-  );
-
-  basicForm.addEventListener('submit', (e) => {
-    if (!validateEmail(emailInputBasic)) {
-      e.preventDefault();
-    }
-  });
-
   // For detailed-contact-form
   const emailInputDetailed = document.querySelector('#contact-email');
   const detailedForm = document.querySelector('#detailed-contact-form');
 
-  emailInputDetailed.addEventListener('input', () => validateEmail(emailInputDetailed));
-  detailedForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  if (emailInputDetailed && detailedForm) {
+    emailInputDetailed.addEventListener('input', () =>
+      validateEmail(emailInputDetailed),
+    );
 
-    const isEmailValid = validateEmail(emailInputDetailed);
-    const isPasswordValid = true;
+    detailedForm.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    if (isEmailValid && isPasswordValid) {
-      alert('Form submitted!');
-      detailedForm.submit();
+      const isEmailValid = validateEmail(emailInputDetailed);
+      const isPasswordValid = true;
+
+      if (isEmailValid && isPasswordValid) {
+        alert('Form submitted!');
+        detailedForm.submit();
+      }
+    });
+  }
+
+  // Active nav highlighting
+  const currentPath = window.location.pathname.split('/').pop();
+  const navLinks = document.querySelectorAll('.navigation-list li a');
+
+  navLinks.forEach((link) => {
+    const href = link.getAttribute('href');
+
+    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+      link.classList.add('active');
     }
   });
-});
 
-// Add event listener to grid items for text expansion
-document.addEventListener('DOMContentLoaded', () => {
+  // Grid item text expansion
   const gridItems = document.querySelectorAll('.grid_item');
 
   gridItems.forEach((gridItem) => {

@@ -45,6 +45,7 @@
 .home-profile_projects-link {
   align-self: flex-start;
   font-size: 1rem;
+  color: var(--yellow);
 }
 
 /* ====== MEDIA QUERIES ===== */
