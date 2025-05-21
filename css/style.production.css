@@ -183,6 +183,12 @@ a:focus-visible, button:focus-visible {
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
+.navigation-list li a.active {
+  color: var(--darkmagenta);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .navigation-list li a::after {
   content: '';
   position: absolute;
