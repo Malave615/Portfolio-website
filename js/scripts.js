@@ -56,12 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       const isEmailValid = validateEmail(emailInputDetailed);
-      const isPasswordValid = true;
 
-      if (isEmailValid && isPasswordValid) {
-        alert('Form submitted!');
-        detailedForm.submit();
+      if (!isEmailValid) {
+        return;
       }
+
+      alert('Form submitted successfully!');
+      detailedForm.reset();
+      detailedForm.submit();
     });
   }
 
