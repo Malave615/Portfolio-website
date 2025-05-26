@@ -2,20 +2,27 @@
 .contact-profile {
   padding: 2rem 1rem;
   margin: 0 auto;
-  max-width: 1000px;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: left;
   color: var(--whitesmoke);
 }
 
 .contact-profile_heading {
+  text-align: center;
   font-size: 2rem;
+  font-weight: bold;
   color: var(--yellow);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .contact-info-box {
-  margin-bottom: 2rem;
-  max-width: 600px;
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 1.5rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -25,25 +32,32 @@
   border: 2px solid var(--yellow);
   border-radius: 10px;
   padding: 1.5rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.5;
   color: var(--whitesmoke);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 /* ====== CONTACT FORM STYLES ===== */
 .contact-form-container {
   margin-top: 2rem;
+  width: 100%;
+  display: block;
+  padding: 0 1rem;
 }
 
 .contact-form-box {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 2rem;
+  padding: 1.5rem;
   border: 2px solid var(--yellow);
   border-radius: 10px;
   color: var(--whitesmoke);
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
 }
 
@@ -68,7 +82,7 @@
   padding: 0.5rem;
   margin-top: 0.25rem;
   border-radius: 5px;
-  border: 1px solid var(--yellow);
+  border: 2px solid var(--yellow);
   background-color: #f9f9f9;
   font-size: 1rem;
 }
@@ -78,28 +92,26 @@
   min-height: 100px;
 }
 
-.contact-form-box small {
-  color: var(--whitesmoke);
-  font-size: 0.85rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
+/* ======= BUTTON STYLES ======= */
 .contact-button {
-  background-color: var(--yellow);
-  border: none;
+  display: block;
+  margin: 1rem auto 0 auto;
   padding: 0.6rem 1rem;
-  color: var(--black);
-  border-radius: 5px;
   font-size: 1rem;
+  background-color: var(--black);
+  color: var(--whitesmoke);
+  border: 2px solid var(--yellow);
+  border-radius: 5px;
   cursor: pointer;
-  color: black;
   margin-top: 1rem;
   transition: background-color 0.3s ease;
 }
 
-.contact-button:hover {
-  background-color: #ffcc00;
+.contact-button:hover,
+.contact-button:focus {
+  background-color: var(--black);
+  box-shadow: 0 0 10px var(--yellow), 0 0 20px var(--yellow);
+  color: var(--whitesmoke);
 }
 
 /* ====== RESPONSIVE STYLES ===== */
@@ -108,7 +120,14 @@
     font-size: 1.5rem;
   }
 
+  .contact-info-box,
   .contact-form-box {
     padding: 1rem;
+    width: 100%;
+    max-width: none;
+  }
+
+  .contact-info-box {
+    max-width: 100%;
   }
 }
