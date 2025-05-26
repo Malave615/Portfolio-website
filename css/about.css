@@ -90,6 +90,7 @@
   min-height: 500px;
   position: relative;
   z-index: 1;
+  padding-top: 2rem;
 }
 
 #about-picture svg {
